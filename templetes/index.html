@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Chocolate House</title>
+    
+    <!-- Link to the stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Chocolate House!</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('flavors') }}">Seasonal Flavors</a></li>
+            <li><a href="{{ url_for('ingredients') }}">Ingredient Inventory</a></li>
+            <li><a href="{{ url_for('suggestions') }}">Customer Suggestions</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>At Chocolate House, we offer a wide range of delicious chocolate flavors made from the finest ingredients. Our seasonal offerings change regularly, so be sure to check back often!</p>
+        </section>
+        
+        <section>
+            <h2>Our Mission</h2>
+            <p>We strive to provide the best chocolate experience for our customers while ensuring all ingredients are sourced responsibly and sustainably.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chocolate House. All rights reserved.</p>
+    </footer>
+</body>
+</html>

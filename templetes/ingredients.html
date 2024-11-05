@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredient Inventory</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ingredient Inventory</h1>
+    <ul>
+        {% for ingredient in ingredients %}
+            <li>{{ ingredient['name'] }} - {{ ingredient['quantity'] }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('add_ingredient') }}" method="post">
+        <h2>Add New Ingredient</h2>
+        <label>Name: <input type="text" name="name"></label><br>
+        <label>Quantity: <input type="number" name="quantity"></label><br>
+        <button type="submit">Add Ingredient</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
